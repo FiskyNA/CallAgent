@@ -13,6 +13,8 @@
     <application
         android:name=".CallAgentApp"
         android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:roundIcon="@mipmap/ic_launcher_round"
         android:label="CallAgent"
         android:theme="@style/Theme.CallAgent"
         android:networkSecurityConfig="@xml/network_security_config">
@@ -24,9 +26,19 @@
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+            
+            <!-- Required for Android to allow us to be the Default Phone App -->
+            <intent-filter>
+                <action android:name="android.intent.action.DIAL" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.DIAL" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:scheme="tel" />
+            </intent-filter>
         </activity>
 
-        <!-- Makes this app a valid phone app so it can answer calls -->
         <service
             android:name=".service.AIInCallService"
             android:exported="true"
@@ -49,5 +61,4 @@
         </service>
 
     </application>
-
 </manifest>
