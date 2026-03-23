@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="bg">#F7F6F3</color>
+    <color name="surface">#FFFFFF</color>
+    <color name="ink">#1A1916</color>
+    <color name="ink2">#6B6860</color>
+    <color name="ink3">#9E9C98</color>
+    <color name="accent">#2563EB</color>
+    <color name="green">#16A34A</color>
+    <color name="red">#DC2626</color>
+</resources>

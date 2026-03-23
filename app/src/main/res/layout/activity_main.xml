@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F7F6F3">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="CallAgent"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:textColor="#1A1916"
+            android:layout_marginBottom="2dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="AI-powered call handler"
+            android:textSize="14sp"
+            android:textColor="#6B6860"
+            android:layout_marginBottom="24dp"/>
+
+        <TextView
+            android:id="@+id/tvStatus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="○ Agent is off"
+            android:textSize="13sp"
+            android:textColor="#6B6860"
+            android:background="#ECEAE6"
+            android:padding="12dp"
+            android:layout_marginBottom="20dp"/>
+
+        <!-- STEP 1 -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="STEP 1 — SETUP"
+            android:textSize="10sp"
+            android:textStyle="bold"
+            android:textColor="#9E9C98"
+            android:layout_marginBottom="8dp"/>
+
+        <Button
+            android:id="@+id/btnSetDefaultPhone"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:text="Set as Default Phone App"
+            android:backgroundTint="#1A1916"
+            android:textColor="#FFFFFF"
+            android:layout_marginBottom="6dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Required so the app can intercept and answer incoming calls."
+            android:textSize="11sp"
+            android:textColor="#9E9C98"
+            android:layout_marginBottom="24dp"/>
+
+        <!-- STEP 2 -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="STEP 2 — ENABLE AGENT"
+            android:textSize="10sp"
+            android:textStyle="bold"
+            android:textColor="#9E9C98"
+            android:layout_marginBottom="8dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:background="#FFFFFF"
+            android:paddingStart="14dp"
+            android:paddingEnd="14dp"
+            android:layout_marginBottom="24dp">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Take calls on my behalf"
+                    android:textSize="13sp"
+                    android:textStyle="bold"
+                    android:textColor="#1A1916"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Agent answers when you don't pick up"
+                    android:textSize="11sp"
+                    android:textColor="#9E9C98"/>
+            </LinearLayout>
+
+            <Switch
+                android:id="@+id/switchAgentEnabled"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+        <!-- STEP 3 -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="STEP 3 — CONFIGURE AGENT"
+            android:textSize="10sp"
+            android:textStyle="bold"
+            android:textColor="#9E9C98"
+            android:layout_marginBottom="8dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="#FFFFFF"
+            android:padding="16dp"
+            android:layout_marginBottom="24dp">
+
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="ANTHROPIC API KEY" android:textSize="10sp" android:textStyle="bold"
+                android:textColor="#9E9C98" android:layout_marginBottom="4dp"/>
+            <EditText android:id="@+id/etApiKey" android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:hint="sk-ant-..."
+                android:inputType="textPassword" android:background="#F2F1EE"
+                android:padding="10dp" android:layout_marginBottom="14dp"/>
+
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="AGENT NAME" android:textSize="10sp" android:textStyle="bold"
+                android:textColor="#9E9C98" android:layout_marginBottom="4dp"/>
+            <EditText android:id="@+id/etAgentName" android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:hint="e.g. Aria"
+                android:background="#F2F1EE" android:padding="10dp" android:layout_marginBottom="14dp"/>
+
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="YOUR BUSINESS NAME" android:textSize="10sp" android:textStyle="bold"
+                android:textColor="#9E9C98" android:layout_marginBottom="4dp"/>
+            <EditText android:id="@+id/etCompany" android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:hint="e.g. Ravi's Clinic"
+                android:background="#F2F1EE" android:padding="10dp" android:layout_marginBottom="14dp"/>
+
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="AGENT ROLE" android:textSize="10sp" android:textStyle="bold"
+                android:textColor="#9E9C98" android:layout_marginBottom="4dp"/>
+            <EditText android:id="@+id/etRole" android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:hint="e.g. appointment scheduler"
+                android:background="#F2F1EE" android:padding="10dp" android:layout_marginBottom="14dp"/>
+
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="OPENING GREETING" android:textSize="10sp" android:textStyle="bold"
+                android:textColor="#9E9C98" android:layout_marginBottom="4dp"/>
+            <EditText android:id="@+id/etGreeting" android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:hint="Hi! Thanks for calling. How can I help?"
+                android:minLines="2" android:gravity="top"
+                android:background="#F2F1EE" android:padding="10dp" android:layout_marginBottom="14dp"/>
+
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="TRANSFER TO (FOR HUMAN HANDOFF)" android:textSize="10sp" android:textStyle="bold"
+                android:textColor="#9E9C98" android:layout_marginBottom="4dp"/>
+            <EditText android:id="@+id/etTransferNumber" android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:hint="+91 98765 43210"
+                android:inputType="phone" android:background="#F2F1EE"
+                android:padding="10dp" android:layout_marginBottom="14dp"/>
+
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="ANSWER AFTER" android:textSize="10sp" android:textStyle="bold"
+                android:textColor="#9E9C98" android:layout_marginBottom="6dp"/>
+
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="horizontal" android:gravity="center_vertical"
+                android:layout_marginBottom="16dp">
+                <SeekBar android:id="@+id/seekTimeout" android:layout_width="0dp"
+                    android:layout_height="wrap_content" android:layout_weight="1"
+                    android:layout_marginEnd="12dp"/>
+                <TextView android:id="@+id/tvTimeout" android:layout_width="40dp"
+                    android:layout_height="wrap_content" android:text="15s"
+                    android:textSize="15sp" android:textStyle="bold" android:textColor="#2563EB"/>
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btnSave"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:text="Save Settings"
+                android:backgroundTint="#1A1916"
+                android:textColor="#FFFFFF"/>
+        </LinearLayout>
+
+        <!-- Recent calls -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="RECENT CALLS"
+            android:textSize="10sp"
+            android:textStyle="bold"
+            android:textColor="#9E9C98"
+            android:layout_marginBottom="8dp"/>
+
+        <LinearLayout
+            android:id="@+id/llCallLogs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="#FFFFFF"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"/>
+
+    </LinearLayout>
+</ScrollView>
